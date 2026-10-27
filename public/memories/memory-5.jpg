@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <radialGradient id="bg4" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="hsl(10, 50%, 22%)" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#08080D" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8D5B5" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E05263" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg4)"/>
+  
+  <!-- Subtle aesthetic polaroid border line -->
+  <rect x="40" y="40" width="720" height="920" rx="12" fill="none" stroke="rgba(248, 247, 244, 0.08)" stroke-width="1.5"/>
+  <rect x="60" y="60" width="680" height="720" rx="8" fill="rgba(8, 8, 13, 0.4)" stroke="rgba(232, 213, 181, 0.15)" stroke-width="1"/>
+
+  <!-- Aesthetic center artwork -->
+  <circle cx="400" cy="400" r="160" fill="none" stroke="rgba(232, 213, 181, 0.2)" stroke-width="1" stroke-dasharray="4 6"/>
+  <circle cx="400" cy="400" r="100" fill="rgba(224, 82, 99, 0.08)" stroke="rgba(224, 82, 99, 0.3)" stroke-width="1.5"/>
+  
+  <path d="M 400 320 C 370 270 300 280 300 340 C 300 400 400 470 400 470 C 400 470 500 400 500 340 C 500 280 430 270 400 320 Z" 
+        fill="rgba(224, 82, 99, 0.18)" 
+        stroke="rgba(232, 213, 181, 0.4)" 
+        stroke-width="1.5" />
+
+  <!-- Typography -->
+  <text x="400" y="830" font-family="Georgia, serif" font-size="28" fill="#F8F7F4" text-anchor="middle" letter-spacing="3">Just You</text>
+  <text x="400" y="870" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#A7A5AE" text-anchor="middle" letter-spacing="1.5">Unrehearsed and beautiful</text>
+  <text x="400" y="910" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="rgba(232, 213, 181, 0.4)" text-anchor="middle" letter-spacing="2">[REPLACE WITH: public/memories/memory-5.jpg]</text>
+</svg>

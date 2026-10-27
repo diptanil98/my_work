@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #08080D;
+    --bg-secondary: #11111A;
+    --text-primary: #F8F7F4;
+    --text-muted: #A7A5AE;
+    --accent-rose: #E05263;
+    --accent-rose-deep: #A82435;
+    --accent-champagne: #E8D5B5;
+    --accent-gold: #DFBD89;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #08080D;
+    color: #F8F7F4;
+  }
+
+  body {
+    background-color: #08080D;
+    color: #F8F7F4;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+/* Custom Typography Helpers */
+.font-serif-cinematic {
+  font-family: var(--font-serif), Georgia, Cambria, serif;
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting), cursive;
+}
+
+/* Subtle Film Grain Texture Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(17, 17, 26, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(248, 247, 244, 0.08);
+}
+
+.glass-panel-subtle {
+  background: rgba(17, 17, 26, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(248, 247, 244, 0.05);
+}
+
+.glass-pill {
+  background: rgba(248, 247, 244, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(248, 247, 244, 0.1);
+}
+
+/* Glow Utilities */
+.glow-rose {
+  box-shadow: 0 0 40px -10px rgba(224, 82, 99, 0.3);
+}
+
+.glow-champagne {
+  box-shadow: 0 0 35px -8px rgba(232, 213, 181, 0.25);
+}
+
+.text-glow-rose {
+  text-shadow: 0 0 20px rgba(224, 82, 99, 0.4);
+}
+
+.text-glow-champagne {
+  text-shadow: 0 0 25px rgba(232, 213, 181, 0.35);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(248, 247, 244, 0.12);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(224, 82, 99, 0.4);
+}
+
+/* Smooth Mask Gradients */
+.mask-radial {
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+.mask-edge-fade {
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+/* Prevent unwanted selection on interactive canvas */
+canvas {
+  user-select: none;
+  -webkit-user-select: none;
+}
